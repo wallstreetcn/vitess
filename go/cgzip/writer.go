@@ -154,3 +154,8 @@ func (z *Writer) Close() error {
 	z.err = io.EOF
 	return nil
 }
+
+// Reset writer's io.Writer to a new object
+func (z *Writer) Reset(w io.Writer) {
+	z.w = w
+}
